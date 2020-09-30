@@ -13,6 +13,8 @@ class Neuron:
 	def calc_out(self):
 		return self.act_fn(self._weights * self._inputs + self.bias)
 
+	def from_np_array(self, array):
+		self._inputs = array
 
 def signum(wx):
 	return sum(wx) >= 0
