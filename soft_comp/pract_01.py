@@ -1,22 +1,25 @@
-import numpy as np
+'''
+soft comp practical 1
+'''
 from hashlib import md5
+import numpy as np
 
 
 #exe 1
-data = 5649
-atad = ''
-while data > 0:
-    atad += str(data%10)
-    data = data//10
-    
-print(int(atad))
+DATA = 5649
+ATAD = ''
+while DATA > 0:
+    ATAD += str(DATA%10)
+    DATA = DATA//10
+
+print(int(ATAD))
 
 #exe 2
-name = "Anirudha"
-roll_no = 171104008
-GATE_rank = 1
-percentile = 99.99
-print(f"name:{name} roll no:{roll_no} GATE rank:{GATE_rank} percentile:{percentile}")
+NAME = "Anirudha"
+ROLL_NO = 171104008
+GATE_RANK = 1
+PERCENTILE = 99.99
+print(f"name:{NAME} roll no:{ROLL_NO} GATE rank:{GATE_RANK} percentile:{PERCENTILE}")
 
 #exe3
 players = ['abc', 'de', 'ijk', 'efg', 'lmn', 'op', 'qq', 'rr']
@@ -25,15 +28,15 @@ for player in ['de', 'ijk', 'efg', 'op']:
 print(players)
 
 #exe4
-n = 6
-for x in range(n):
-	print(' ' * (n-x), end='')
-	print('*', end='')
-	if x ==3:
-		print('******', end='')
-	else:
-		print(' ' * x * 2, end='')
-	print('*')
+N = 6
+for x in range(N):
+    print(' ' * (N-x), end='')
+    print('*', end='')
+    if x ==3:
+        print('******', end='')
+    else:
+        print(' ' * x * 2, end='')
+    print('*')
 
 
 #exe5
@@ -51,14 +54,14 @@ numbers = [1234567890, 2345678901, 3456789012, 4567890123, 5678901234]
 name = {naav:md5(naav.encode()).hexdigest() for naav in naava}
 hashdict  = dict(zip(name.values(), numbers))
 for x in range(2):
-	x = input('names to delete:')
-	hashval = name[x]
-	del name[x]
-	del hashdict[hashval]
+    x = input('names to delete:')
+    hashval = name[x]
+    del name[x]
+    del hashdict[hashval]
 for x in range(2):
-	x = input('name to add:')
-	h = md5(x.encode()).hexdigest()
-	name[x] = h
-	num = input('mobile numbers:')
-	hashdict[h] = num
+    x = input('name to add:')
+    H = md5(x.encode()).hexdigest()
+    name[x] = H
+    num = input('mobile numbers:')
+    hashdict[H] = num
 print(name, hashdict)

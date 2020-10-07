@@ -1,3 +1,6 @@
 {
-    "python.pythonPath": "soft_boi/bin/python"
+    "python.pythonPath": "/usr/bin/python3",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.autoComplete.addBrackets": true
 }
