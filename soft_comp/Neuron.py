@@ -18,7 +18,7 @@ def signum(wx):
     return sum(wx) >= 0
 
 def bipolar_step(wx):
-    return 2 * (sum(wx) > 0) -1
+    return 2 * int(sum(wx) > 0) -1
 
 def softmax(wx):
     return np.exp(wx) / np.sum(np.exp(wx))
