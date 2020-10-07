@@ -14,5 +14,5 @@ for epoch in range(5):
         neuron._inputs = numpy.array(x)
         o = neuron.calc_out()
         neuron._weights += c * o * neuron._inputs
-        print(f'weights: {neuron._weights}\t\tf(net): {o}\tinputs: {neuron._inputs}')
+        print(f'weights: {neuron._weights} f(net): {o} inputs: {neuron._inputs}')
     print()
