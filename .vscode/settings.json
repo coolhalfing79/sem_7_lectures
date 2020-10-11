@@ -1,0 +1,6 @@
+{
+    "python.pythonPath": "/home/anirudha/.local/share/virtualenvs/sem_7_lectures-0uHJdIa8/bin/python",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.pylintUseMinimalCheckers": false
+}

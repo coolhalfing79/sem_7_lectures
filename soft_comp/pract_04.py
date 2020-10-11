@@ -9,8 +9,8 @@ def show_output(gate, gate_inputs_list):
     helper function to display output
     '''
     for gate_input in gate_inputs_list:
-        gate._inputs = numpy.array(gate_input)
-        print(f'x1:{g_input[0]} x2:{g_input[1]} O:', gate.calc_out())
+        gate.inputs = numpy.array(gate_input)
+        print(f'x1:{gate_input[0]} x2:{gate_input[1]} O:', gate.calc_out())
 
 gate_inputs = [[0,0],[0,1],[1,0], [1,1]] #inputs to test the gates against
 
@@ -38,7 +38,7 @@ show_output(nor_gate, gate_inputs)
 print('\nnot')
 not_gate = Neuron(lambda x: sum(x) > -1, weights=[-1])
 for g_inputs in [[0], [1]]:
-    not_gate._inputs = numpy.array(g_inputs)
+    not_gate.inputs = numpy.array(g_inputs)
     print(f'x:{g_inputs} O:', not_gate.calc_out())
 
 
@@ -51,9 +51,9 @@ xor_gate = Neuron(signum, weights=[1, 1], bias=-1/2)
 def sh_xor_output(gate_inputs_list):
     '''helper fuction to display xor output'''
     gate_inputs_array = numpy.array(gate_inputs_list)
-    o1._inputs = o2._inputs = gate_inputs_array
-    xor_gate._inputs = numpy.array([o1.calc_out(), o2.calc_out()])
-    print(f'x1:{gate_inputs[0]} x2:{gate_inputs[1]} O:', xor_gate.calc_out())
+    o1.inputs = o2.inputs = gate_inputs_array
+    xor_gate.inputs = numpy.array([o1.calc_out(), o2.calc_out()])
+    print(f'x1:{gate_inputs_array[0]} x2:{gate_inputs_array[1]} O:', xor_gate.calc_out())
 
 for g_input in gate_inputs:
     sh_xor_output(g_input)

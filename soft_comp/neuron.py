@@ -7,14 +7,14 @@ import numpy as np
 class Neuron: # pylint: disable=too-few-public-methods
     '''McCulloch pitts neuron model'''
     def __init__(self,activation_fn, weights, bias=0):
-        self._weights = np.array(weights)
-        self._inputs = np.empty_like(self._weights)
+        self.weights = np.array(weights)
+        self.inputs = np.empty_like(self.weights)
         self.act_fn = activation_fn
         self.bias = bias
 
     def calc_out(self):
         '''calculates neuron output using specified activation function'''
-        return self.act_fn(self._weights * self._inputs + self.bias)
+        return self.act_fn(self.weights * self.inputs + self.bias)
 
 def signum(w_x):
     '''signum activation function'''
