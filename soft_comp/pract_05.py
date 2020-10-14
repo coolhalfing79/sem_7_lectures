@@ -13,7 +13,7 @@ neuron = Neuron(activation_fn=bipolar_step, weights=weights)
 for epoch in range(5):
     print(f'\nepoch {epoch+1}')
     for x in inputs:
-        neuron._inputs = numpy.array(x)
+        neuron.inputs = numpy.array(x)
         o = neuron.calc_out()
-        neuron._weights += C * o * neuron._inputs
-        print(f'weights: {neuron._weights} f(net): {o} inputs: {neuron._inputs}')
+        neuron.weights += C * o * neuron.inputs
+        print(f'weights: {neuron.weights} f(net): {o} inputs: {neuron.inputs}')

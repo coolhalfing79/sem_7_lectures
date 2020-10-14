@@ -1,6 +1,7 @@
 '''
 soft comp practical 1
 '''
+from pprint import pprint
 from hashlib import md5
 import numpy as np
 
@@ -45,7 +46,7 @@ A2 = np.random.randn(3, 4)
 A3 = np.concatenate((A1, A2))
 A4 = np.concatenate((A3, np.random.randn(2, 4)))
 A4 = np.concatenate((A4, np.random.randn(10, 6)), axis=1)
-# print(A4.shape)
+print(A4.shape)
 # print(A1.T, A2.T, A3.T, A4.T)
 
 #exe6
@@ -64,4 +65,5 @@ for x in range(2):
     name[x] = H
     num = input('mobile numbers:')
     hashdict[H] = num
-print(name, hashdict)
+pprint(name)
+pprint(hashdict)
