@@ -1,5 +1,5 @@
 ANN/ann
 soft_comp/soft_boi
-soft_comp/__pycache__/
-soft_comp/.vscode/
-soft_comp/__pycache__/Neuron.cpython-38.pyc
+**.pyc
+**__pycache__
+**.vscode
