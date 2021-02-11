@@ -1,5 +1,5 @@
 '''
-soft comp practical 1
+Introduction to python
 '''
 from pprint import pprint
 from hashlib import md5

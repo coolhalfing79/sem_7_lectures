@@ -1,5 +1,5 @@
 '''
-Implementation of logic gates using artificial neurons
+logic gates
 '''
 import numpy
 from neuron import Neuron, signum #Neuron class written in practical 3
@@ -16,27 +16,27 @@ gate_inputs = [[0,0],[0,1],[1,0], [1,1]] #inputs to test the gates against
 
 # and gate
 print("\nand gate")
-and_gate = Neuron(lambda net: net > 1, weights=[1, 1])
+and_gate = Neuron(lambda x: x > 1, weights=[1, 1])
 show_output(and_gate, gate_inputs)
 
 #or_gate
 print("\nor gate")
-or_gate = Neuron(lambda net: net > 0, weights=[1, 1])
+or_gate = Neuron(lambda x: x > 0, weights=[1, 1])
 show_output(or_gate, gate_inputs)
 
 # nand gate
 print('\nnand')
-nand_gate = Neuron(lambda net: net > -2, weights=[-1, -1])
+nand_gate = Neuron(lambda x: x > -2, weights=[-1, -1])
 show_output(nand_gate, gate_inputs)
 
 # nor gate
 print('\nnor')
-nor_gate = Neuron(lambda net: net > -1, weights=[-1, -1])
+nor_gate = Neuron(lambda x: x > -1, weights=[-1, -1])
 show_output(nor_gate, gate_inputs)
 
 # not
 print('\nnot')
-not_gate = Neuron(lambda net: net > -1, weights=[-1])
+not_gate = Neuron(lambda x: x > -1, weights=[-1])
 for g_inputs in [[0], [1]]:
     not_gate.inputs = numpy.array(g_inputs)
     print(f'x:{g_inputs} O:', not_gate.calc_out())

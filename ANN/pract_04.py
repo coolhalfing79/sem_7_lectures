@@ -1,5 +1,5 @@
 '''
-Design of an artificial neuron using Hebbian Learning rule
+hebbian learning rule
 '''
 import numpy
 from neuron import Neuron, bipolar_step
@@ -16,4 +16,4 @@ for epoch in range(5):
         neuron.inputs = numpy.array(x)
         o = neuron.calc_out()
         neuron.weights += C * o * neuron.inputs
-        print(f'weights: {neuron.weights} f(net): {o} inputs: {neuron.inputs}')
+        print(f'weights:\t{neuron.weights}')

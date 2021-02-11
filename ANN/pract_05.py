@@ -1,5 +1,5 @@
 '''
-Design of an artificial neuron using perceptron learning rule
+perceptron learning rule
 '''
 import numpy
 from neuron import Neuron, bipolar_step
@@ -18,4 +18,4 @@ for epoch in range(5):
         neuron.inputs = x
         o = neuron.calc_out()
         neuron.weights += C * (di- o) * x
-        print(f'weights: {neuron.weights} f(net): {o} inputs: {neuron.inputs}')
+        print(f'weights: {neuron.weights}')

@@ -1,5 +1,5 @@
 '''
-ANN practical 1
+Delta learning rule
 '''
 # from pprint import pprint
 import numpy
@@ -26,8 +26,8 @@ for epoch in range(250):
             print(f'weights: {neuron.weights}\tf(net): {o:.2f}')
     weight_change.append(list(neuron.weights))
 
-# pprint(weight_change)
 
+plt.style.use('fivethirtyeight')
 plt.title('change of weights in 250 epochs')
 plt.plot(weight_change)
 plt.legend(['w1', 'w2', 'w3', 'w4'])
