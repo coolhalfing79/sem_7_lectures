@@ -2,6 +2,7 @@ import numpy as np
 from neuron import Neuron
 
 
+np.set_printoptions(precision=2)
 w = [1, -1, 0, 0.5]
 C = 0.1
 D = [-1, -1, 1]
@@ -14,4 +15,4 @@ for epoch in range(5):
         neuron.inputs = x
         o = neuron.calc_out()
         neuron.weights += C * o * x
-        print(f'weights: {neuron.weights} f(net): {o} inputs: {neuron.inputs}')
+        print(f'weights: {neuron.weights}')
