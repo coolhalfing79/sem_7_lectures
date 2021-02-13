@@ -58,8 +58,8 @@ def arctan(net):
 
 def relu(net):
     '''relu activation function'''
-    max(0, net)
+    return max(0, net)
 
 def leaky_relu(net):
     '''leaky relu activation function'''
-    max(0.01 * net, net)
+    return max(0.01 * net, net)
