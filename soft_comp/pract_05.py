@@ -18,5 +18,5 @@ for epoch in range(5):
     for x, di in zip(X, D):
         neuron.inputs = x
         o = neuron.calc_out()
-        neuron.weights += C * (di- o) * x
+        neuron.weights += C * (di - o) * x
         print(f'weights: {neuron.weights}')

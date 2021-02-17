@@ -3,20 +3,31 @@ import numpy as np
 def sign(net):
     return 2 * (net >= 0) -1
 
-inputs = np.array([[ 1,  1,  1, -1],
-                   [-1, -1, -1,  1],
-                   [ 1,  1,  1,  1],
-                   [ 1,  1, -1, -1],
-                   [ 1, -1,  1, -1],
-                   [-1,  1,  1, -1]])
+X = np.array([
+    [ 1,  1,  1, -1],
+    [-1, -1, -1,  1],
+    [ 1,  1,  1,  1],
+    [ 1,  1, -1, -1],
+    [ 1, -1,  1, -1],
+    [-1,  1,  1, -1]
+])
 
-W = np.array([[0, 1, 1, -1],
-              [1, 0, 1, -1],
-              [1, 1, 0, -1],
-              [-1, -1, -1, 0]])
+n = len(X[0])
+P = len(X)
+W = np.zeros((n, n))
 
-for o in inputs:
-    print('\ninput:', o)
-    # for epoch in range(5):
-    o = sign(W @ o)
+def sign(net):
+    return 2 * (net > 0) -1
+
+for i in range(n):
+    for j in range(n):
+        W[i, j] = np.sum(X[:, i] * X[:, j]) / P
+
+I = np.random.uniform(-1, 1, (10, 4))
+print('stored vectors:\n', X)
+for i in I:
+    print('\ninput:', i)
+    o = i
+    while o not in X:
+        o = sign(W @ o)
     print('output:', o)
